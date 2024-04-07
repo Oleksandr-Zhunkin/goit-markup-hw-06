@@ -801,13 +801,20 @@ img {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 24px 16px;
   background-color: #fcfcfc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 768px) {
+  .modal-window {
+    padding: 72px 24px 24px 24px;
+    width: 408px;
+    min-height: 584px;
+  }
 }
 .modal-btn {
   position: absolute;
@@ -872,10 +879,15 @@ img {
   border-radius: 4px;
   width: 100%;
   height: 40px;
-  padding: 11px 38px;
+  padding: 11px 34px;
   outline: transparent;
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 1158px) {
+  .modal-input-area {
+    padding: 11px 38px;
+  }
 }
 .modal-input-area:focus {
   border-color: #4d5ae5;
@@ -969,5 +981,76 @@ input[type="checkbox"]:checked + .agreement .agreement-checkbox {
 .form-btn:hover,
 .form-btn:focus {
   background: #404bbf;
+}
+/* #endregion */
+
+/* #region Menu */
+.menu-wrapper {
+  width: 320px;
+  height: 640px;
+  padding: 72px 24px 40px 16px;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  transition-property: opacity, visibility, transform;
+  transform: translateX(100%);
+}
+@media only screen and (max-width: 767px) {
+  .menu-wrapper.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transform: translateX(0);
+  }
+   {
+  }
+}
+.menu-socials {
+  gap: 40px;
+}
+.menu-btn {
+  background-color: transparent;
+}
+.menu-adress {
+  margin-bottom: 48px;
+}
+.menu-contacts {
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  padding: 0;
+}
+.menu-contacts-link {
+  color: #4d5ae5;
+}
+.menu-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: baseline;
+  margin-bottom: 168px;
+}
+.menu-navigation .navigation-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  padding: 0;
+}
+.menu-navigation .navigation-link::after {
+  display: none;
+}
+.menu-navigation .navigation-list {
+  text-align: right;
 }
 /* #endregion */
