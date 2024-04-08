@@ -379,6 +379,11 @@ img {
   font-size: 36px;
   line-height: 1.11;
 }
+@media only screen and (min-width: 768px) {
+  .advantages .title-list {
+    text-align: left;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .advantages .title-list {
     font-weight: 500;
@@ -388,7 +393,6 @@ img {
 }
 .advantages-list {
   width: 288px;
-  /* height: 120px; */
 }
 @media only screen and (min-width: 768px) {
   .advantages-list {
@@ -500,6 +504,10 @@ img {
   gap: 8px;
   padding: 32px 0;
 }
+.team-list .title-list {
+  margin-bottom: 0;
+}
+
 .team-list-socials {
   display: flex;
   justify-content: center;
@@ -581,6 +589,8 @@ img {
   transform: translateY(0);
 }
 .portfolio-list-img {
+  max-width: 100%;
+  height: auto;
 }
 .portfolio-list-description {
   display: none;
