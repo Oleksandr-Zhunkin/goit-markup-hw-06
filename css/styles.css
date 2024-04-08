@@ -340,6 +340,7 @@ img {
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 36px;
+    min-width: 496px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -378,9 +379,16 @@ img {
   font-size: 36px;
   line-height: 1.11;
 }
+@media only screen and (min-width: 1158px) {
+  .advantages .title-list {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
 .advantages-list {
   width: 288px;
-  height: 120px;
+  /* height: 120px; */
 }
 @media only screen and (min-width: 768px) {
   .advantages-list {
@@ -390,7 +398,6 @@ img {
 @media only screen and (min-width: 1158px) {
   .advantages-list {
     max-width: 264px;
-    height: 224px;
   }
 }
 .advantages-list-description {
